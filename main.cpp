@@ -149,12 +149,12 @@ void loop()
     }
     else
     {
-      Serial.println("Error: httpCode was ");
+      Serial.println("Error: httpCode was " + http.errorToString(httpCode));
     }
   }
   else
   {
-    Serial.println("Request failed: ");
+    Serial.println("Request failed: " + http.errorToString(httpCode));
   }
 
   http.end(); //Close connection
